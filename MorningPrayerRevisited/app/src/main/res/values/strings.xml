@@ -1,0 +1,122 @@
+<resources>
+    <string name="app_name">Morning Prayer</string>
+    <string name="clergy_prompt_text">I AM A:</string>
+    <string name="clergy_first">PRIEST</string>
+    <string name="clergy_second">OTHER</string>
+    <string name="reading_prompt_text">I WANT TO READ:</string>
+    <string name="reading_first">JUBILATE</string>
+    <string name="reading_second">VENITE</string>
+    <string name="collect_prompt_text">I WANT TO COLLECT WITH:</string>
+    <string name="thanksgiving_prompt_text">IT IS A TIME OF THANKSGIVING</string>
+    <string-array name="collects">
+        <item>SUNDAYS</item>
+        <item>SATURDAYS</item>
+        <item>FRIDAYS</item>
+        <item>PEACE</item>
+        <item>RENEWAL OF LIFE</item>
+        <item>GRACE</item>
+        <item>GUIDANCE</item>
+    </string-array>
+
+    <string name="opensent">Opening Sentences</string>
+    <string name="confofsin">Confession of Sin</string>
+    <string name="invandsalt">The Inventory and Psalter</string>
+    <string name="lesson">The Lessons</string>
+    <string name="creed">The Apostles\' Creed</string>
+    <string name="prayers">The Prayers</string>
+    <string name="collectday">The Collect of the Day</string>
+    <string name="thanksgiving">The General Thanksgiving</string>
+
+    <string name="silence">Silence may be kept, all kneeling</string>
+    <string name="prieststand">Priest alone stands and says</string>
+    <string name="stand">All stand</string>
+    <string name="togetherstand">Officiant and people together, all standing</string>
+
+    <string-array name="openingadvent_chapters">
+        <item>Mark 13:55, 36</item>
+        <item>Isaiah 40:3</item>
+        <item>Isaiah 40:5</item>
+    </string-array>
+    <string-array name="openingadvent">
+        <item>Watch, for you known not when the master of the house will come, in the evening, or at midnight, or at cockcrow, or in my morning; lest he come suddenly and find you asleep.</item>
+        <item>In the wilderness prepare the way of the Lord, make straight in the desert a highway for our God.</item>
+        <item>The glory of the Lord shall be revealed, and all flesh shall see it together.</item>
+    </string-array>
+
+    <string-array name="openingchristmas_chapters">
+        <item>Luke 2:10, 11</item>
+        <item>Revelation 21:3</item>
+    </string-array>
+    <string-array name="openingchristmas">
+        <item>Behold, I bring you good news of a great joy, which will come to all the people; for unto you is born this day in the city of David, a Savior, who is Christ the Lord.</item>
+        <item>Behold, the dwelling of God is the mankind. He will dwell with them, and they shall be his people, and God himself will be with them, and be their God.</item>
+    </string-array>
+
+    <string-array name="openingepiphany_chapters">
+        <item>Isaiah 60:3</item>
+        <item>Isaiah 49:6b</item>
+        <item>Malachi 1:11</item>
+    </string-array>
+    <string-array name="openingepiphany">
+        <item>Nations shall come to your light, and kings to the brightness of your rising.</item>
+        <item>I will give you as a light to the nations, that my salvation may reach to the end of the earth.</item>
+        <item>From the rising of the sun to its setting my Name shall be great among the nations, and in every place incense shall be offered to my Name, and a pure offering: for my Name shall be great among the nations, says the Lord of hosts.</item>
+    </string-array>
+
+    <string-array name="openinglent_chapters">
+        <item>I John 1:8, 9</item>
+        <item>Joel 2:13</item>
+        <item>Luke 15:18, 19</item>
+        <item>Daniel 9:9, 10</item>
+        <item>Mark 8:34</item>
+    </string-array>
+    <string-array name="openinglent">
+        <item>If we say we have no sin, we deceive ourselves, and the tr uth is not in us; but if we confess our sins, God who is faithful and just, will forgive our sins and cleanse us from all unrighteousness.</item>
+        <item>Rend your hearts and not your garments. Return to the Lord your God, for he is gracious and merciful, slow to anger and abounding in steadfast love, and repents of evil.</item>
+        <item>I will arise and go to my father, and I will say to him, "Father, I have sinned against heaven, and before you; I am no longer worthy to be called your son."</item>
+        <item>To the Lord our God belong mercy and forgiveness, because we have rebelled against him and have not obeyed the voice of the Lord our God by following his laws which he set before us.</item>
+        <item>Jesus said, "If anyone will come after me, let him deny himself, and take up his cross, and follow me."</item>
+    </string-array>
+
+    <string-array name="openingholyweek_chapters">
+        <item>Isaiah 53:6</item>
+        <item>Lamentations 1:12</item>
+    </string-array>
+    <string-array name="openingholyweek">
+        <item>All we like sheep have gone astray; we have turned every one to his own way; and the Lord has laid on him the iniquity of us all.</item>
+        <item>Is it nothing to you, all you who pass by? Look and see if there is any sorrow like my sorrow which was brought upon me, whom the Lord hath afflicted.</item>
+    </string-array>
+
+    <string-array name="openingeasterasc_chapters">
+        <item>Psalm 118:24</item>
+        <item>1 Corinthians 15:57</item>
+        <item>Colossians 3:1</item>
+        <item>Hebrews 9:24</item>
+        <item>Acts 1:8</item>
+    </string-array>
+    <string-array name="openingeasterasc">
+        <item>On this day the Lord has acted; we will rejoice and be glad in it.</item>
+        <item>Thanks be to God, who gives us the victory through our Lord Jesus Christ.</item>
+        <item>If then you have been raised with Christ, seek the things that are above, where Christ is, seated at the right hand of God.</item>
+        <item>Christ has entered, not into a sanctuary made with hands, a copy of true one, but into heaven itself, now to appear in the presence of God on our behalf.</item>
+        <item>You shall receive power when the Holy Ghost has come upon you; and you shall be my witness in Jerusalem, and in all Judea, and Samaria, and to the ends of the earth.</item>
+    </string-array>
+    <string name="firsteasterasc_pt1">Alleluia! Christ is risen.</string>
+    <string name="firsteasterasc_pt2">The Lord is risen indeed. Alleluia!</string>
+
+    <string name="revelation4_8">Revelation 4:8</string>
+    <string name="openingtrinity">Holy, holy, holy is the Lord God Almighty, who was, and is, and is to come.</string>
+
+    <string-array name="openingsaint_chapters">
+        <item>Colossians 1:12</item>
+        <item>Ephesians 2:19</item>
+        <item>Psalm 19:4</item>
+    </string-array>
+    <string-array name="openingsaint">
+        <item>We give thanks to the Father, who has made us worthy to share in the inheritance of the saints in light.</item>
+        <item>You are no longer strangers and sojourners, but fellow citizens with the saints and members of the household of God.</item>
+        <item>Their sound has gone out into all lands, and their message to the ends of the world.</item>
+    </string-array>
+
+
+</resources>
