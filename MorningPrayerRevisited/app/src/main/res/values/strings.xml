@@ -1,4 +1,6 @@
 <resources>
+
+    <string name="blank"></string>
     <string name="app_name">Morning Prayer</string>
     <string name="clergy_prompt_text">I AM A:</string>
     <string name="clergy_first">PRIEST</string>
@@ -18,6 +20,7 @@
         <item>GUIDANCE</item>
     </string-array>
 
+    <string name="alleluia">Alleluia</string>
     <string name="opensent">Opening Sentences</string>
     <string name="confofsin">Confession of Sin</string>
     <string name="invandsalt">The Inventory and Psalter</string>
@@ -27,10 +30,15 @@
     <string name="collectday">The Collect of the Day</string>
     <string name="thanksgiving">The General Thanksgiving</string>
 
-    <string name="silence">Silence may be kept, all kneeling</string>
-    <string name="prieststand">Priest alone stands and says</string>
+    <string name="silencekneeling">Silence may be kept, all kneeling</string>
+    <string name="silence">Silence may be kept</string>
+    <string name="prieststand">The Priest alone stands and says</string>
     <string name="stand">All stand</string>
+    <string name="remainkneeling">Remaining Kneeling</string>
     <string name="togetherstand">Officiant and people together, all standing</string>
+    <string name="togetherkneel">Officiant and people together, all kneeling</string>
+    <string name="officiantandpeople">Officiant and People</string>
+    <string name="officiantsays">The Officiant says to the people</string>
 
     <string-array name="openingadvent_chapters">
         <item>Mark 13:55, 36</item>
@@ -101,8 +109,8 @@
         <item>Christ has entered, not into a sanctuary made with hands, a copy of true one, but into heaven itself, now to appear in the presence of God on our behalf.</item>
         <item>You shall receive power when the Holy Ghost has come upon you; and you shall be my witness in Jerusalem, and in all Judea, and Samaria, and to the ends of the earth.</item>
     </string-array>
-    <string name="firsteasterasc_pt1">Alleluia! Christ is risen.</string>
-    <string name="firsteasterasc_pt2">The Lord is risen indeed. Alleluia!</string>
+    <string name="openingeasterasc_pt1">Alleluia! Christ is risen.</string>
+    <string name="openingeasterasc_pt2">The Lord is risen indeed. Alleluia!</string>
 
     <string name="revelation4_8">Revelation 4:8</string>
     <string name="openingtrinity">Holy, holy, holy is the Lord God Almighty, who was, and is, and is to come.</string>
@@ -118,5 +126,51 @@
         <item>Their sound has gone out into all lands, and their message to the ends of the world.</item>
     </string-array>
 
+    <string name="psalm105_1">Psalm 105:1</string>
+    <string name="openingthanksgiving">O give thanks to the Lord, and call upon his Name; make known his deeds among the peoples.</string>
+
+    <string-array name="openinganytime_chapters">
+        <item>Philippians 1:2</item>
+        <item>Psalm 122:1</item>
+        <item>Psalm 19:14</item>
+        <item>Psalm 43:3</item>
+        <item>Habakkuk 2:20</item>
+        <item>John 4:23</item>
+        <item>Isaiah 57:15</item>
+    </string-array>
+    <string-array name="openinganytime">
+        <item>Grace to you and peace from God our Father and from the Lord Jesus Christ.</item>
+        <item>I was glad when they said to me, "Let us go to the house of the Lord."</item>
+        <item>Let the words of my mouth and the meditation of my heart be acceptable in your sight, O Lord, my strength and my redeemer.</item>
+        <item>Send out your light and your truth, that they may lead me, and bring me to your holy hill and to your dwelling.</item>
+        <item>The Lord is in his holy temple; let all the earth keep silence before him.</item>
+        <item>The hour is coming, and now is, when the true worshipers will worship the Father in spirit and in truth, for such the Father seeks to worship him.</item>
+        <item>Thus says the high and lofty One who inhabits eternity, whose name is Holy, "I dwell in the high and holy place and also with the one who has a contrite and humble spirit, to revive the spirit of the humble and to revive the heart of the contrite."</item>
+    </string-array>
+
+    <string-array name="confessionofsin_pt1_priest">
+        <item>Dearly beloved, we have come together in the presence of Almighty God our heavenly Father, to set forth his praise, to hear his holy Word, and to ask, for ourselves and on behalf of others, those things that are necessary for our life and our salvation. And so that we may prepare ourselves in heart and mind to worship him, let us kneel in silence, and with penitent and obedient hearts confess our sins, that we may obtain forgiveness by his infinite goodness and mercy.</item>
+        <item>Let us confess our sins against God and our neighbor.</item>
+    </string-array>
+    <string name="confessionofsin_pt2_priest">Most merciful God, we confess that we have sinned against you in thought, word, and deed, by what we have done, and by what we have left undone. We have not loved you with our whole heart; that we may delight in your will, and walk in your ways, to the glory of your Name. Amen.</string>
+    <string name="confessionofsin_pt3_priest">Almighty God have mercy on you, forgive you all your sins through our Lord Jesus Christ, strengthen you in all goodness, and by the power of the Holy Spirit keep you in eternal life. <i>Amen.</i></string>
+    <string-array name="confessionofsin_pt1_other">
+        <item>Dearly beloved, we have come together in the presence of Almighty God your heavenly Father, to set forth his praise, to hear his holy Word, and to ask, for ourselves and on behalf of others, those things that are necessary for your life and your salvation. And so that we may prepare ourselves in heart and mind to worship him, let you kneel in silence, and with penitent and obedient hearts confess your sins, that we may obtain forgiveness by his infinite goodness and mercy.</item>
+        <item>Let you confess your sins against God and your neighbor.</item>
+    </string-array>
+    <string name="confessionofsin_pt2_other">Most merciful God, we confess that we have sinned against you in thought, word, and deed, by what we have done, and by what we have left undone. We have not loved you with your whole heart; that we may delight in your will, and walk in your ways, to the glory of your Name. Amen.</string>
+    <string name="confessionofsin_pt3_other">Almighty God have mercy on you, forgive you all your sins through your Lord Jesus Christ, strengthen you in all goodness, and by the power of the Holy Spirit keep you in eternal life. <i>Amen.</i></string>
+
+    <string name="invandsalt_pt1"><i>Officiant</i>: Lord, open our lips.</string>
+    <string name="invandsalt_pt2"><i>People</i>: And our mouth shall proclaim your praise.</string>
+    <string name="invandsalt_pt3_lent">Glory to the Father, and to the Son, and to the Holy Spirit: as it was in the beginning, is now, and will be for ever. Amen.</string>
+    <string name="invandsalt_pt3">Glory to the Father, and to the Son, and to the Holy Spirit: as it was in the beginning, is now, and will be for ever. Alleluia.</string>
+
+    <string name="jubilate_title">Jubilate</string>
+    <string name="psalm100">Psalm 100</string>
+    <string name="jubilate">Be joyful in the Lord, all you lands;&lt;br /&gt;serve the Lord with gladness&lt;br /&gt;and come before his presence with a song.&lt;br /&gt;&lt;br /&gt;Know this: The Lord himself is God;&lt;br /&gt;he himself has made us, and we are his;&lt;br /&gt;we are his people and the sheep of his pasture.&lt;br /&gt;&lt;br /&gt;Enter his gates with thanksgiving;&lt;br /&gt;go into his courts with praise;&lt;br /&gt;give thanks to him and call upon his Name.&lt;br /&gt;&lt;br /&gt;For the Lord is good;&lt;br /&gt;his mercy is everlasting;&lt;br /&gt;and his faithfulness endures from age to age.</string>
+    <string name="venite_title">Venite</string>
+    <string name="psalm95_1">Psalm 95:1-7</string>
+    <string name="venite">Come, let us sing to the Lord;&lt;br /&gt;let us shout for joy to the Rock of our salvation.&lt;br /&gt;Let us come before his presence with thanksgiving&lt;br /&gt;and raise a loud shout to him with psalms.&lt;br /&gt;&lt;br /&gt;For the Lord is a great God,&lt;br /&gt;and a great King above all gods.&lt;br /&gt;In his hand are the caverns of the earth,&lt;br /&gt;and the heights of the hills are his also.&lt;br /&gt;The sea is his, for he made it,&lt;br /&gt;and his hands have molded the dry land.&lt;br /&gt;&lt;br /&gt;Come, let us bow down, and bend the knee,&lt;br /&gt;and kneel before the Lord our Maker.&lt;br /&gt;For he is our God,&lt;br /&gt;and we are the people of his pasture and the sheep of his hand.&lt;br /&gt;Oh, that today you would hearken to his voice!</string>
 
 </resources>
