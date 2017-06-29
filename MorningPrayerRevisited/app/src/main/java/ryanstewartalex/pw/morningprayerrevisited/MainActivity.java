@@ -13,7 +13,7 @@ import java.lang.reflect.Array;
 
 public class MainActivity extends AppCompatActivity {
 
-    RadioButton clergyPos1, clergyPos2, reading1, reading2;
+    RadioButton clergyPos1, clergyPos2, reading1, reading2, lesson1, lesson2, lesson3;
     Spinner collect;
 
     @Override
@@ -34,18 +34,25 @@ public class MainActivity extends AppCompatActivity {
         reading1 = (RadioButton) findViewById(R.id.reading1);
         reading2 = (RadioButton) findViewById(R.id.reading2);
         collect = (Spinner) findViewById(R.id.collect_spinner);
+        lesson1 = (RadioButton) findViewById(R.id.lesson1);
+        lesson2 = (RadioButton) findViewById(R.id.lesson2);
+        lesson3 = (RadioButton) findViewById(R.id.lesson3);
+
 
 
     }
 
     public void generateTextButtonDown(View view) {
 
-        Intent getTextActivity = new Intent(MainActivity.this, GeneratedPage.class);
+        Intent getIdleActivity = new Intent(MainActivity.this, IdlePage.class);
 
-        getTextActivity.putExtra("isPriest", clergyPos1.isChecked());
-        getTextActivity.putExtra("isJubilate", reading1.isChecked());
-        getTextActivity.putExtra("collectSpinner", collect.getSelectedItemPosition());
+        getIdleActivity.putExtra("isPriest", clergyPos1.isChecked());
+        getIdleActivity.putExtra("isJubilate", reading1.isChecked());
+        getIdleActivity.putExtra("collectSpinner", collect.getSelectedItemPosition());
+        getIdleActivity.putExtra("nTest", lesson1.isChecked());
+        getIdleActivity.putExtra("oTest", lesson2.isChecked());
+        getIdleActivity.putExtra("gospel", lesson3.isChecked());
 
-        startActivity(getTextActivity);
+        startActivity(getIdleActivity);
     }
 }

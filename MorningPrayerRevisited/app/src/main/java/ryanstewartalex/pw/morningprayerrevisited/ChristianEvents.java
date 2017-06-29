@@ -1,8 +1,19 @@
 package ryanstewartalex.pw.morningprayerrevisited;
 
 
-import org.joda.time.DateTime;
+import android.os.AsyncTask;
+import android.os.Handler;
+import android.os.Message;
 
+import org.joda.time.DateTime;
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
+import org.jsoup.nodes.Element;
+import org.jsoup.select.Elements;
+
+
+import java.io.IOException;
+import java.util.concurrent.ExecutionException;
 
 import de.jollyday.util.CalendarUtil;
 
@@ -48,9 +59,11 @@ import de.jollyday.util.CalendarUtil;
 public class ChristianEvents {
 
     DateTime date;
+    Document doc;
+    String url;
 
     ChristianEvents() {
-        date = new DateTime(2017, 12, 23, 1, 1, 1, 1);
+        date = new DateTime();
     }
 
     private DateTime createDay(int month, int day) {
@@ -125,6 +138,8 @@ public class ChristianEvents {
         return false;
     }
 
-
-
 }
+
+
+
+
