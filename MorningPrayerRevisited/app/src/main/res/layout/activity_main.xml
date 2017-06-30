@@ -128,16 +128,16 @@
             <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/lesson_first"
                 android:layout_marginRight="5dp"
-                android:id="@+id/lesson1"/>
+                android:text="@string/lesson_second"
+                android:id="@+id/lesson2"/>
 
             <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:text="@string/lesson_first"
                 android:layout_marginRight="5dp"
-                android:text="@string/lesson_second"
-                android:id="@+id/lesson2"/>
+                android:id="@+id/lesson1"/>
 
             <RadioButton
                 android:layout_width="wrap_content"
@@ -146,28 +146,6 @@
                 android:id="@+id/lesson3"/>
         </LinearLayout>
 
-
-    </LinearLayout>
-
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:orientation="horizontal"
-        android:gravity="center">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="10dp"
-            android:text="@string/thanksgiving_prompt_text"
-            android:textSize="15sp" />
-
-        <CheckBox
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/thanksgiving_button"/>
 
     </LinearLayout>
 

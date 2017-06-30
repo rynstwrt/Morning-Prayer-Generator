@@ -1,24 +1,19 @@
 package ryanstewartalex.pw.morningprayerrevisited;
 
-import android.content.Intent;
-import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.text.Html;
 import android.widget.TextView;
 
-import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
-import java.util.Objects;
 import java.util.Random;
 
 
@@ -168,26 +163,24 @@ public class GeneratedPage extends AppCompatActivity{
         }
 
         br();br();br();
-        genBig(R.string.psalmsappointed);
-        br();br();
-        //TODO: generate psalm appointed texts
 
         doc.select("p > a").remove();
         doc.select("p > em").remove();
+        doc.select("p > br").remove();
 
         List<Object> bodyList = new ArrayList<>(Arrays.asList(doc.body().getAllElements().toArray()));
-        Element lastItem = doc.select("h1#Psalms ~ audio").first();
+        Element lastItemPsalm = doc.select("h1#Psalms ~ audio").first();
         List<List<Object>> psalms = new ArrayList<>();
         List<String> psalmTitles = new ArrayList<>();
-        Elements afterStrongs = doc.select("h1#Psalms ~ p > strong");
+        Elements afterStrongsPsalm = doc.select("h1#Psalms ~ p > strong,h1#Psalms ~ p > h1,h1#Psalms ~ h1");
 
-        for (int i = 0; i < afterStrongs.size(); i++) {
-            if (bodyList.indexOf(afterStrongs.get(i)) < bodyList.indexOf(lastItem)) {
+        for (int i = 0; i < afterStrongsPsalm.size(); i++) {
+            if (bodyList.indexOf(afterStrongsPsalm.get(i)) < bodyList.indexOf(lastItemPsalm)) {
                 List<Object> currentPsalm;
-                if (bodyList.indexOf(afterStrongs.get(i + 1)) < bodyList.indexOf(lastItem)) {
-                    currentPsalm = bodyList.subList(bodyList.indexOf(afterStrongs.get(i)), bodyList.indexOf(afterStrongs.get(i + 1)));
+                if (bodyList.indexOf(afterStrongsPsalm.get(i + 1)) < bodyList.indexOf(lastItemPsalm)) {
+                    currentPsalm = bodyList.subList(bodyList.indexOf(afterStrongsPsalm.get(i)), bodyList.indexOf(afterStrongsPsalm.get(i + 1)) - 1);
                 } else {
-                    currentPsalm = bodyList.subList(bodyList.indexOf(afterStrongs.get(i)), bodyList.indexOf(lastItem));
+                    currentPsalm = bodyList.subList(bodyList.indexOf(afterStrongsPsalm.get(i)), bodyList.indexOf(lastItemPsalm));
                 }
                 psalms.add(currentPsalm);
             }
@@ -196,13 +189,23 @@ public class GeneratedPage extends AppCompatActivity{
         for (List<Object> lo : psalms) {
             Element firstItem = (Element) lo.get(0);
             psalmTitles.add(firstItem.text());
+            List<Object> originalLo = lo;
             lo = lo.subList(1, lo.size());
+
+            genBig(firstItem.text());
+            br();br();
 
             for (Object o : lo) {
                 Element e = (Element) o;
-                e.text(e.text().replaceAll("\\d+([A-Za-z]+)", "$1"));
-                e.text(e.text().replaceAll("<br>", ""));
-                System.out.println(e.text());
+                e.text(e.text().replaceAll("\\d+\\s?([A-Za-z]+)", "$1"));
+                gen(e.text());
+                if (lo.indexOf(lo.get(lo.size() - 1)) != lo.indexOf(o)) { //if not the last one
+                    br();br();
+                }
+            }
+            //if not last psalm, br() x3.
+            if (psalms.indexOf(originalLo) != psalms.size() - 1) {
+                br();br();br();
             }
         }
 
@@ -211,10 +214,55 @@ public class GeneratedPage extends AppCompatActivity{
         gen(R.string.endofpsalmsappointed);
 
         br();br();br();
-        genBig(R.string.lesson);
-        br();br();
-        //TODO: generate lesson texts here
-        br();br();
+
+        Element lastItem = doc.select("h1#Lessons3 ~ #Essay").first();
+        List<List<Object>> lessons = new ArrayList<>();
+        List<String> lessonTitles = new ArrayList<>();
+        Elements afterStrongsLesson = doc.select("#Lessons3 ~ h1,#Lessons3 ~ strong,#Lessons3 ~ b");
+
+        for (int i = 0; i < afterStrongsLesson.size(); i++) {
+            if (bodyList.indexOf(afterStrongsLesson.get(i)) < bodyList.indexOf(lastItem) && afterStrongsLesson.get(i).text().matches("The \\w+ Testament Lesson|The Gospel")) {
+                List<Object> currentLesson;
+
+                try {
+                    if (bodyList.indexOf(afterStrongsLesson.get(i + 1)) < bodyList.indexOf(lastItem)) {
+                        currentLesson = bodyList.subList(bodyList.indexOf(afterStrongsLesson.get(i)) + 1, bodyList.indexOf(afterStrongsLesson.get(i + 1)));
+                    } else {
+                        currentLesson = bodyList.subList(bodyList.indexOf(afterStrongsLesson.get(i)) + 1, bodyList.indexOf(lastItem));
+                    }
+                }catch(IndexOutOfBoundsException e) {
+                    currentLesson = bodyList.subList(bodyList.indexOf(afterStrongsLesson.get(i)) + 1, bodyList.indexOf(lastItem));
+                }
+                lessons.add(currentLesson);
+            }
+        }
+
+        List<List<Object>> selectedLessons = new ArrayList<>();
+        if (isNTest) { selectedLessons.add(lessons.get(0)); }
+        if (isOTest) { selectedLessons.add(lessons.get(1)); }
+        if (isGospel) { selectedLessons.add(lessons.get(2)); }
+
+        for (List<Object> lo : selectedLessons) {
+            Element firstItem = (Element) lo.get(1);
+            lessonTitles.add(firstItem.text());
+            List<Object> originalLo = lo;
+            lo = lo.subList(2, lo.size());
+
+            genBig(firstItem.text());
+            br();br();
+
+            for (Object o : lo) {
+                Element e = (Element) o;
+                e.text(e.text().replaceAll("\\d+\\s?([A-Za-z]+)", "$1"));
+                gen(e.text());
+                br();br();
+            }
+            pickText(R.array.canticle);
+            //if not last lesson, br() x3.
+            if (selectedLessons.indexOf(originalLo) != selectedLessons.size() - 1) {
+                br();br();br();
+            }
+        }
 
 
         br();br();br();
@@ -329,15 +377,7 @@ public class GeneratedPage extends AppCompatActivity{
     }
 
     private void genBig(String s) {
-        text += ("<span style=\"font-size:10dp\">" + s + "</span>");
-    }
-
-    private void genSpeaking(int personSpeaking, int message) {
-        text += ("<i>" + getString(personSpeaking) + ":</i> " + getString(message));
-    }
-
-    private void genResponse(int s) {
-        text += ("<i>" + getString(s) + "</i>");
+        text += ("<b>" + s + "</b>");
     }
 
     private void genItal(int s) {
