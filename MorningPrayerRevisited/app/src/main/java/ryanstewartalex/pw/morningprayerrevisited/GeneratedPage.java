@@ -2,8 +2,11 @@ package ryanstewartalex.pw.morningprayerrevisited;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.text.Html;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.widget.TextView;
 
 import org.jsoup.nodes.Document;
@@ -12,17 +15,14 @@ import org.jsoup.select.Elements;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Date;
 import java.util.List;
 import java.util.Random;
-
 
 public class GeneratedPage extends AppCompatActivity{
 
     ChristianEvents cevents;
 
     Document doc;
-    Date date;
 
     TextView mainText;
     boolean isPriest, isJubilate, isNTest, isOTest, isGospel;
@@ -30,6 +30,32 @@ public class GeneratedPage extends AppCompatActivity{
     Random ran;
 
     String text = "";
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_generated, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+
+        switch(item.getItemId()) {
+            case R.id.action_audio: //TODO: takes two presses on initial play?
+                if(item.getTitle() == "Read Aloud") {
+                    item.setTitle("Stop Reading");
+                    item.setIcon(R.drawable.ic_pause_black_24dp);
+                    //play audio
+                } else {
+                    item.setTitle("Read Aloud");
+                    item.setIcon(R.drawable.ic_play_arrow_black_24dp);
+                    //pause it
+                }
+                break;
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -50,7 +76,7 @@ public class GeneratedPage extends AppCompatActivity{
         isGospel = getIntent().getBooleanExtra("gospel", false);
         collectSpinnerChoice = getIntent().getIntExtra("collectSpinner", 0);
 
-        genBig(R.string.opensent);
+        genBig(R.string.opensent); //TODO: remove br(); calls.
         br();br();
 
         if (cevents.inAdvent()) {
@@ -73,10 +99,6 @@ public class GeneratedPage extends AppCompatActivity{
             genItal(R.string.revelation4_8);
         } else if (cevents.isAllSaints()) {
             pickTextWithVerse(R.array.openingsaint, R.array.openingsaint_chapters);
-        } else if (cevents.isThanksgiving()) {
-            gen(R.string.openingthanksgiving);
-            br();
-            genItal(R.string.psalm105_1);
         } else {
             pickTextWithVerse(R.array.openinganytime, R.array.openinganytime_chapters);
         }
@@ -383,9 +405,5 @@ public class GeneratedPage extends AppCompatActivity{
     private void genItal(int s) {
         text += ("<i><small>" + getString(s) + "</small></i>");
     }
-
-
-
-
 
 }

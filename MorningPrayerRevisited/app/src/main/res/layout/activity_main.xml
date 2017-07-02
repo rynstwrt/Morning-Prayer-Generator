@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -11,7 +10,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Morning Prayer Creator"
+        android:text="@string/header_text"
         android:textSize="30sp"
         android:layout_marginTop="30dp"
         android:textStyle="bold"/>
@@ -54,7 +53,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_marginTop="20dp">
+        android:layout_marginTop="30dp">
 
         <TextView
             android:layout_width="wrap_content"
@@ -87,7 +86,7 @@
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="30dp"
         android:orientation="horizontal"
         android:gravity="center">
 
@@ -111,7 +110,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_marginTop="20dp">
+        android:layout_marginTop="30dp">
 
         <TextView
             android:layout_width="wrap_content"
@@ -125,21 +124,22 @@
         <LinearLayout android:layout_height="wrap_content"
             android:layout_width="wrap_content"
             android:orientation="horizontal">
-            <RadioButton
+
+            <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="5dp"
                 android:text="@string/lesson_second"
                 android:id="@+id/lesson2"/>
 
-            <RadioButton
+            <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/lesson_first"
                 android:layout_marginRight="5dp"
                 android:id="@+id/lesson1"/>
 
-            <RadioButton
+            <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/lesson_third"
@@ -158,5 +158,4 @@
         android:textSize="30sp"
         android:id="@+id/generate_button"
         android:onClick="generateTextButtonDown"/>
-
 </LinearLayout>

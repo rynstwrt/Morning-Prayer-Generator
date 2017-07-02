@@ -76,6 +76,7 @@ public class IdlePage extends AppCompatActivity {
             getGenActivity.putExtra("gospel", isGospel);
 
             startActivity(getGenActivity);
+            finish();
         }
 
     }

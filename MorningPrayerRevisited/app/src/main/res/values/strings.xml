@@ -1,7 +1,7 @@
 <resources>
 
-    <string name="blank"></string>
-    <string name="app_name">Morning Prayer</string>
+    <string name="app_name">Episcopal Morning Prayer</string>
+    <string name="header_text">Rite II Generator</string>
     <string name="clergy_prompt_text">I AM A:</string>
     <string name="clergy_first">PRIEST</string>
     <string name="clergy_second">OTHER</string>
@@ -14,7 +14,6 @@
     <string name="lesson_first">OLD TEST.</string>
     <string name="lesson_second">NEW TEST.</string>
     <string name="lesson_third">GOSPEL</string>
-    <string name="thanksgiving_prompt_text">IT IS A TIME OF THANKSGIVING</string>
     <string-array name="collects">
         <item>SUNDAYS</item>
         <item>SATURDAYS</item>
@@ -177,7 +176,7 @@
     <string name="psalm100">Psalm 100</string>
     <string name="jubilate">Be joyful in the Lord, all you lands;&lt;br /&gt;serve the Lord with gladness&lt;br /&gt;and come before his presence with a song.&lt;br /&gt;&lt;br /&gt;Know this: The Lord himself is God;&lt;br /&gt;he himself has made us, and we are his;&lt;br /&gt;we are his people and the sheep of his pasture.&lt;br /&gt;&lt;br /&gt;Enter his gates with thanksgiving;&lt;br /&gt;go into his courts with praise;&lt;br /&gt;give thanks to him and call upon his Name.&lt;br /&gt;&lt;br /&gt;For the Lord is good;&lt;br /&gt;his mercy is everlasting;&lt;br /&gt;and his faithfulness endures from age to age.</string>
     <string name="venite_title">Venite</string>
-    <string name="psalm95_1">Psalm 95:1-7</string>
+    <string name="psalm95_1">Psalm 95:1–7</string>
     <string name="venite">Come, let us sing to the Lord;&lt;br /&gt;let us shout for joy to the Rock of our salvation.&lt;br /&gt;Let us come before his presence with thanksgiving&lt;br /&gt;and raise a loud shout to him with psalms.&lt;br /&gt;&lt;br /&gt;For the Lord is a great God,&lt;br /&gt;and a great King above all gods.&lt;br /&gt;In his hand are the caverns of the earth,&lt;br /&gt;and the heights of the hills are his also.&lt;br /&gt;The sea is his, for he made it,&lt;br /&gt;and his hands have molded the dry land.&lt;br /&gt;&lt;br /&gt;Come, let us bow down, and bend the knee,&lt;br /&gt;and kneel before the Lord our Maker.&lt;br /&gt;For he is our God,&lt;br /&gt;and we are the people of his pasture and the sheep of his hand.&lt;br /&gt;Oh, that today you would hearken to his voice!</string>
 
     <string name="antiphon_advent">Our King and Savior draweth nigh: O come, let us adore him.</string>
@@ -199,9 +198,6 @@
     <string name="antiphon_allsaints_easter">Alleluia. The Lord is glorious in his saints: O come, let us adore him. Alleluia.</string>
 
     <string name="endofpsalmsappointed">Glory to the Father, and to the Son, and to the Holy Spirit:&lt;br /&gt;as it was in the beginning, is now, and will be for ever. Amen.</string>
-
-    <string name="endoflesson_pt1">The Word of the Lord.</string>
-    <string name="endoflesson_pt2">Thanks be to God.</string>
 
     <string-array name="canticle">
         <item>I will sing to the Lord, for he is lofty and uplifted; &lt;br/&gt; the horse and its rider has he hurled into the sea. &lt;br/&gt;The Lord is my strength and my refuge; &lt;br/&gt; the Lord has become my Savior. &lt;br/&gt;This is my God and I will praise him, &lt;br/&gt; the God of my people and I will exalt him. &lt;br/&gt;The Lord is a mighty warrior; &lt;br/&gt; Yahweh is his Name. &lt;br/&gt;The chariots of Pharaoh and his army has he hurled into the sea; &lt;br/&gt; the finest of those who bear armor have been &lt;br/&gt;      drowned in the Red Sea. &lt;br/&gt;The fathomless deep has overwhelmed them; &lt;br/&gt; they sank into the depths like a stone. &lt;br/&gt;Your right hand, O Lord, is glorious in might; &lt;br/&gt; your right hand, O Lord, has overthrown the enemy. &lt;br/&gt;Who can be compared with you, O Lord, among the gods? &lt;br/&gt; who is like you, glorious in holiness, &lt;br/&gt; awesome in renown, and worker of wonders? &lt;br/&gt;You stretched forth your right hand; &lt;br/&gt; the earth swallowed them up. &lt;br/&gt;With your constant love you led the people you redeemed; &lt;br/&gt; with your might you brought them in safety to &lt;br/&gt;      your holy dwelling. &lt;br/&gt;You will bring them in and plant them &lt;br/&gt; on the mount of your possession, &lt;br/&gt;The resting-place you have made for yourself, O Lord, &lt;br/&gt; the sanctuary, O Lord, that your hand has established. &lt;br/&gt;The Lord shall reign &lt;br/&gt; for ever and for ever.&lt;br/&gt;&lt;br/&gt;Glory to the Father, and to the Son, and to the Holy Spirit: &lt;br/&gt; as it was in the beginning, is now, and will be for ever. Amen.</item>

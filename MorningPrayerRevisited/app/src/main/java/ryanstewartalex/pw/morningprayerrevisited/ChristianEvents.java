@@ -1,22 +1,6 @@
 package ryanstewartalex.pw.morningprayerrevisited;
 
-
-import android.os.AsyncTask;
-import android.os.Handler;
-import android.os.Message;
-
 import org.joda.time.DateTime;
-import org.joda.time.format.DateTimeFormat;
-import org.jsoup.Jsoup;
-import org.jsoup.nodes.Document;
-import org.jsoup.nodes.Element;
-import org.jsoup.select.Elements;
-
-
-import java.io.IOException;
-import java.util.concurrent.ExecutionException;
-
-import de.jollyday.util.CalendarUtil;
 
 /** NOTES
  * -----------------------------------
@@ -60,8 +44,6 @@ import de.jollyday.util.CalendarUtil;
 public class ChristianEvents {
 
     DateTime date;
-    Document doc;
-    String url;
 
     ChristianEvents() {
         date = new DateTime();
@@ -135,9 +117,6 @@ public class ChristianEvents {
         return date.equals(createDay(11, 1));
     }
 
-    public boolean isThanksgiving() {
-        return false;
-    }
 
 }
 
