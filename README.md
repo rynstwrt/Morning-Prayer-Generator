@@ -1,5 +1,5 @@
 # Morning-Prayer-Generator
-Android App to generate an episcopal morning prayer (rite 2) sermon.
+Android App to generate an episcopal morning prayer (rite 2) service.
 
 Code is in directory `MorningPrayerRevisted/app/src/main/java/ryanstewartalex/pw/morningprayerrevisited`.
 
